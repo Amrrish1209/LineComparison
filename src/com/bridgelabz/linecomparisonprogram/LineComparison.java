@@ -17,13 +17,21 @@ public class LineComparison {
 		//Enter the co-ordinates of point 2(x4,y4) of line 2
 		double x4=7.0;
 		double y4=4.0;
+		
 		// calculate the length of the line segment
 		double lengthOne = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 		double lengthTwo = Math.sqrt(Math.pow(x4 - x3, 2) + Math.pow(y4 - y3, 2));
-
-		// print out the result
-		System.out.println("The length of the line segment of length one is: " + lengthOne);
-		System.out.println("The length of the line segment of length two is: " + lengthTwo);
+		
+		// compare the lengths of the lines
+		if (lengthOne == lengthTwo) {
+			System.out.println("The length of line one is equal to the length of line two");
+		}
+		else if (lengthOne > lengthTwo) {
+			System.out.println("The length of line one is greater than the length of line two");
+		}
+		else {
+			System.out.println("The length of line one is less than the length of line two");
+		}
 
 	}
 }
